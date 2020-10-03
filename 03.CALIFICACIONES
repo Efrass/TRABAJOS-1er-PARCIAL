@@ -1,0 +1,122 @@
+//Programa para obtener calificaciones dadas por letras
+//02/10/2020
+//Realizado por Efrain Hernandez Gutierrezs
+
+#include <stdio.h>
+main()
+
+{
+    //SE DECLARA LA VARIABLE QUE PROCESARA LOS VALORES NUMERICOS
+    float  CT=0;
+    //SE DECLARAN LOS VALORES DE LAS CALIFICACIONES CON LETRAS
+    char CC1, CC2, CC3;
+
+    //SE IMPRIMEN LAS LEYENDAS PARA PEDIR LAS CALIFICACIONES
+    printf("Introduzca sus calificacion 1...");
+    fflush(stdin);
+    scanf("%c", &CC1);
+    fflush(stdin);
+    printf("Introduzca sus calificacion 2...");
+    fflush(stdin);
+    scanf("%c", &CC2);
+    fflush(stdin);
+    printf("Introduzca sus calificacion 3...");
+    fflush(stdin);
+    scanf("%c", &CC3);
+    fflush(stdin);
+
+     //SE HACEN PREGUNTAS ACERCA DE SI ES A TIENE 10, ES DECIR LAS CONVERSIONES CON RESPECTO
+     //AL RANGO DE CALIFICACION ASOCIADO A LAS LETRAS SOLAMENTE DE LA CALIFICACION NUMERO 1
+     if(CC1=='A'||CC1=='a')
+
+         CT=CT+10;
+
+     else if (CC1=='B'||CC1=='b')
+
+         CT=CT+9;
+
+     else if (CC1=='C'||CC1=='c')
+
+         CT=CT+8;
+
+     else if (CC1=='D'||CC1=='d')
+
+         CT=CT+7;
+
+     else if (CC1=='E'||CC1=='e')
+
+         CT=CT+6;
+
+     else
+
+         CT=CT+5;
+///////////////////////////////////////////////////
+
+     //SE HACEN PREGUNTAS ACERCA DE SI ES A TIENE 10, ES DECIR LAS CONVERSIONES CON RESPECTO
+     //AL RANGO DE CALIFICACION ASOCIADO A LAS LETRAS SOLAMENTE DE LA CALIFICACION NUMERO 2
+     if(CC2=='A'||CC2=='a')
+
+         CT=CT+10;
+
+     else if (CC2=='B'||CC2=='b')
+
+         CT=CT+9;
+
+     else if (CC2=='C'||CC2=='c')
+
+         CT=CT+8;
+
+     else if (CC2=='D'||CC2=='d')
+
+         CT=CT+7;
+
+     else if (CC2=='E'||CC2=='e')
+
+         CT=CT+6;
+
+     else
+
+         CT=CT+5;
+////////////////////////////////////////////////////////////
+
+     //SE HACEN PREGUNTAS ACERCA DE SI ES A TIENE 10, ES DECIR LAS CONVERSIONES CON RESPECTO
+     //AL RANGO DE CALIFICACION ASOCIADO A LAS LETRAS SOLAMENTE DE LA CALIFICACION NUMERO 3
+     if(CC3=='A'||CC3=='a')
+
+         CT=CT+10;
+
+     else if (CC3=='B'||CC3=='b')
+
+         CT=CT+9;
+
+     else if (CC3=='C'||CC3=='c')
+
+         CT=CT+8;
+
+     else if (CC3=='D'||CC3=='d')
+
+         CT=CT+7;
+
+     else if (CC3=='E'||CC3=='e')
+
+         CT=CT+6;
+
+     else
+
+         CT=CT+5;
+
+/////////////////////////////////////////////////
+
+     //AQUI SE IMPRIME TU CALIFICACION SI ES MAYOR A 7 PERO MENOR A 10
+     if (CT/3>=7)
+     printf("Aprobaste con: %.2f", CT/3);
+
+     //AQUI SE I PRIME TU CALIFICACION SI ES IGUAL A 6
+     else if (CT/3==6)
+          printf("Panzaste con: %.2f", CT/3);
+
+     //AQUI SE IMPRIME SI TU CALIFICACION ES IGUAL A 5
+     else
+     printf("Reprobaste con: %.2f", CT/3);
+
+}
