@@ -1,0 +1,49 @@
+//Programa para las incognitas de una ecuacion cuadratica o de segundo grado
+//02/10/2020
+//Realizado por Efrain Hernandez Gutierrezs
+
+#include <stdio.h>
+
+int main()
+{
+   //SE DECLARAN LAS VARIABLES A UTILIZAR EN LA ECUACION Y UNA QUE SERA LA OPERACION DENTRO DE LA RAIZ CUADRADA O LA DISCRIMINANTE
+   float a, b, c, SOLU;
+
+   //SE MUESTRA UNA LEYENDA
+   printf("Resolucion de una ecuacion de segundo grado o cuadratica\n\n");
+   printf("  2\n");
+   printf("ax + bx + c = 0\n\n");
+   //SE PIDEN LOS VALORES DE LOS COEFICIENTES EN LA ECUACION
+   printf("Introduce los valores de a, b, c: *Nota: Todos en una sola linea pero separados por una coma*");
+   scanf("%f, %f, %f", &a, &b, &c);
+
+   //AQUI SE REALIZA LA PARTE DE LAS OPERAIONES DENTRO DE LA RAIZ LLAMADA DISCRIMINANTE
+   SOLU=b*b-(4*a*c);
+
+   //SI LA DISCRIMINANTE ES IGUAL A CERO SOLO HAY UNA SOLUCION REAL Y SE PROCEDE AL CALCULO PARA LUEGO IMPRIMIR EL VALOR RESULTANTE
+   if (SOLU==0)
+    printf("La solucion es x=:   %.2f\n", -b/(2*a));
+
+   //SI LA DISCRIMINANTE ES MAYOR A CERO HAY DOS SOLUCIONES REALES Y SE PROCEDE AL CALCULO PARA LUEGO IMPRIMIR EL VALOR RESULTANTE
+   else if (SOLU>0)
+   {
+       printf("La solucion es x= :   %.2f\n", (-b+sqrt(SOLU))/(2*a));
+       printf("                 1\n");
+       printf("La solucion es x= :   %.2f\n", (-b-sqrt(SOLU))/(2*a));
+       printf("                 2\n");
+   }
+
+   //SI LA RESULTANTE ES MENOR A CERO HAY DOS SOLUCIONES PERO SON COMPLEJAS Y SE PROCEDE AL CALCULO PARA LUEGO IMPRIMIR EL VALOR RESULTANTE
+   else
+   {/*D<0*/
+
+       printf("La solucion es x= :   %.2f+%0.2fi\n", -b/(2*a), (sqrt(-SOLU))/(2*a));
+       printf("                 1\n");
+       printf("La solucion es x= :   %.2f-%0.2fi\n", -b/(2*a), (sqrt(-SOLU))/(2*a));
+       printf("                 2\n");
+
+   }
+
+
+    return 0;
+}
