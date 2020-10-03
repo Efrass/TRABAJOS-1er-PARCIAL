@@ -1,0 +1,31 @@
+//25/09/2020
+//Realizado por Efrain Hernandez Gutierrezs
+//este programa esta realizado para tres leds en paralelo donde se hallara
+//la resistencia de cada led
+
+#include <stdio.h>
+
+
+int main(void)
+{
+    float Vf;
+    float R1, R2, R3;
+    float V1, V2, V3;
+
+    printf("Este programa esta hecho para calcular la resistencia necesaria para los Leds de color:\n Blanco\n Verde estandar\n Azul billante\n");
+    printf("Escribe el voltaje fuente Vf:");
+    scanf("%f", &Vf);
+
+    V1=Vf-2.8;//led blanco
+    V2=Vf-1.8;//led verde
+    V3=Vf-3;//led azul
+
+    R1=V1/0.02;//led blanco
+    R2=V2/0.015;//led verde
+    R3=V3/0.02;//led azul
+
+    printf("La resistencia del Led Blanco es: %.1f Ohms\n", R1);
+    printf("La la resistencia del Led Verde es: %.1f Ohms\n", R2);
+    printf("La la resistencia Led Azul es: %.1f Ohms\n", R3);
+    return 0;
+}
