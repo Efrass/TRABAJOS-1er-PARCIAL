@@ -1,0 +1,29 @@
+//Programa para calcular corriente
+//25/09/2020
+//Realizado por Efrain Hernandez Gutierrez
+
+#include <stdio.h>
+
+
+int main(void)
+{
+    float Vf;
+    int R1, R2, R3;
+    float I1, I2, I3;
+
+    printf("Escribe el voltaje fuente Vf:");
+    scanf("%f", &Vf);
+
+    printf("Escribe el valor de las 3 resistencias, separados por una coma:");
+    scanf("%d, %d, %d", &R1, &R2, &R3);
+
+    I1=Vf/R1;
+    I2=Vf/R2;
+    I3=Vf/R3;
+
+    printf("El voltje de cada resistencia es igual al de la fuente: %.3fV\n", Vf);
+    printf("La corriente R1 (%d Ohms) es: %.3fA\n", R1,I1 );
+    printf("La corriente R3 (%d Ohms) es: %.3fA\n", R2,I2 );
+    printf("La corriente R3 (%d Ohms) es: %.3fA\n", R3,I3 );
+    return 0;
+}
