@@ -1,0 +1,27 @@
+//  Realizado por Efraín Hernández Gutiérrez
+// 12 de octubre del 2020
+
+#include <stdio.h>
+
+int main()
+{
+    int Numero, Limite, Sucesion;
+    printf("Ingresa un numero en el rango de 0 a 5: ");
+    scanf("%d",&Numero);
+    Limite=(7*Numero)+2;
+    Sucesion=Numero*3;
+    while (Sucesion <= Limite)
+    {
+        if (Numero <=5)
+        {
+            printf("%d ",Sucesion);
+            Sucesion=Sucesion+2;
+        }
+        else
+        {
+            printf("Recuerda que es un numero del 0 al 5");
+            return 0;
+        }
+    }
+return 0;
+}
