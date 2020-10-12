@@ -1,0 +1,28 @@
+//Es una sucesion que te da una serie de numeros de dos unidades en dos unidades a partir de un limite superior de cero y un limite inferior de 5
+//  Realizado por Efraín Hernández Gutiérrez
+// 12 de octubre del 2020
+
+#include <stdio.h>
+
+int main()
+{
+    int Numero,Limite,Sucesion;
+    printf("Ingresa un numero en el rango de 0 a 5: ");
+    scanf("%d",&Numero);
+    Sucesion=Numero*Numero;
+    Limite=Sucesion-(Numero*2);
+    while (Limite <= Sucesion)
+    {
+        if (Numero <=5)
+        {
+           printf("%d ",Sucesion);
+           Sucesion=Sucesion-(2);
+        }
+        else
+        {
+            printf("Solo son numeros comprendidos del 0 hasta el 5");
+            return 0;
+        }
+    }
+}
+
