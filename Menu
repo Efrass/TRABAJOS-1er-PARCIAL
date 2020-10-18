@@ -1,0 +1,311 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //Variables de 01.Circuito 1
+float Vf;
+int R1, R2, R3;
+float I1, I2, I3;
+
+    //Variables de 02.Circuito 2
+float vf;
+float r1, r2, r3;
+float V1, V2, V3;
+
+
+    //Variables de 03.Calificaciones
+float  CT=0;
+char CC1, CC2, CC3;
+
+    //Variables de 04.Ecuacion algebraica
+float a, b, c, SOLU;
+
+    //Variables del menu
+int opc;
+
+
+while(opc!=7)
+
+{
+    printf("-------------------MENU-------------------\n");
+    printf("Seleccione la opcion deseada *con numeros* y despues pulsa enter: \n");
+    printf("Opcion 1: 01.Circuito \nOpcion 2: 02.LEDs \nOpcion 3: 03.Calificaciones \nOpcion 4: 04.Ecuacion cuadratica \nOpcion 5: 05.Sucesion 1 \nOpcion 6: 06.Sucesion 2 \nOpcion 7: Salir \n");
+    scanf("%d", &opc);
+    system("cls");
+
+        //Parte de 01.Circuito 1
+    if(opc==1)
+    {
+        printf("01.Circuito\n");
+        printf("Escribe el voltaje fuente Vf y pulsa enter:");
+        scanf("%f", &Vf);
+
+        printf("Escribe el valor de las 3 resistencias, separados por una coma, despues pulsa enter:");
+        scanf("%d, %d, %d", &R1, &R2, &R3);
+
+            I1=Vf/R1;
+            I2=Vf/R2;
+            I3=Vf/R3;
+
+        printf("El voltje de cada resistencia es igual al de la fuente: %.3fV\n", Vf);
+        printf("La corriente R1 (%d Ohms) es: %.3fA\n", R1,I1 );
+        printf("La corriente R3 (%d Ohms) es: %.3fA\n", R2,I2 );
+        printf("La corriente R3 (%d Ohms) es: %.3fA\n", R3,I3 );
+        printf("\n------Presione enter para regresar al menu------\n");
+
+    }
+
+        //Parte de 02.Circuito 2
+    else if (opc==2)
+    {
+        printf("02.LEDs\n");
+        printf("Este programa esta hecho para calcular la resistencia necesaria para los Leds de color:\n Blanco\n Verde estandar\n Azul billante\n");
+        printf("Escribe el voltaje fuente Vf:");
+        scanf("%f", &vf);
+
+        V1=vf-2.8;//led blanco
+        V2=vf-1.8;//led verde
+        V3=vf-3;//led azul
+
+            r1=V1/0.02;//led blanco
+            r2=V2/0.015;//led verde
+            r3=V3/0.02;//led azul
+
+        printf("La resistencia del Led Blanco es: %.1f Ohms\n", r1);
+        printf("La la resistencia del Led Verde es: %.1f Ohms\n", r2);
+        printf("La la resistencia Led Azul es: %.1f Ohms\n", r3);
+        printf("\n------Presione enter para regresar al menu------\n");
+
+    }
+
+        //Parte de 03.Calificaciones
+    else if (opc==3)
+    {
+        printf("03.Calificaciones\n");
+         //SE IMPRIMEN LAS LEYENDAS PARA PEDIR LAS CALIFICACIONES
+    printf("Introduzca su calificacion en letra 1 y despues presiona enter...");
+    fflush(stdin);
+    scanf("%c", &CC1);
+    fflush(stdin);
+    printf("Introduzca su calificacion 2 en letra y despues presiona enter...");
+    fflush(stdin);
+    scanf("%c", &CC2);
+    fflush(stdin);
+    printf("Introduzca su calificacion 3 en letra y despues presiona enter...");
+    fflush(stdin);
+    scanf("%c", &CC3);
+    fflush(stdin);
+
+     //SE HACEN PREGUNTAS ACERCA DE SI ES A TIENE 10, ES DECIR LAS CONVERSIONES CON RESPECTO
+     //AL RANGO DE CALIFICACION ASOCIADO A LAS LETRAS SOLAMENTE DE LA CALIFICACION NUMERO 1
+     if(CC1=='A'||CC1=='a')
+
+         CT=CT+10;
+
+     else if (CC1=='B'||CC1=='b')
+
+         CT=CT+9;
+
+     else if (CC1=='C'||CC1=='c')
+
+         CT=CT+8;
+
+     else if (CC1=='D'||CC1=='d')
+
+         CT=CT+7;
+
+     else if (CC1=='E'||CC1=='e')
+
+         CT=CT+6;
+
+     else
+
+         CT=CT+5;
+///////////////////////////////////////////////////
+
+     //SE HACEN PREGUNTAS ACERCA DE SI ES A TIENE 10, ES DECIR LAS CONVERSIONES CON RESPECTO
+     //AL RANGO DE CALIFICACION ASOCIADO A LAS LETRAS SOLAMENTE DE LA CALIFICACION NUMERO 2
+     if(CC2=='A'||CC2=='a')
+
+         CT=CT+10;
+
+     else if (CC2=='B'||CC2=='b')
+
+         CT=CT+9;
+
+     else if (CC2=='C'||CC2=='c')
+
+         CT=CT+8;
+
+     else if (CC2=='D'||CC2=='d')
+
+         CT=CT+7;
+
+     else if (CC2=='E'||CC2=='e')
+
+         CT=CT+6;
+
+     else
+
+         CT=CT+5;
+////////////////////////////////////////////////////////////
+
+     //SE HACEN PREGUNTAS ACERCA DE SI ES A TIENE 10, ES DECIR LAS CONVERSIONES CON RESPECTO
+     //AL RANGO DE CALIFICACION ASOCIADO A LAS LETRAS SOLAMENTE DE LA CALIFICACION NUMERO 3
+     if(CC3=='A'||CC3=='a')
+
+         CT=CT+10;
+
+     else if (CC3=='B'||CC3=='b')
+
+         CT=CT+9;
+
+     else if (CC3=='C'||CC3=='c')
+
+         CT=CT+8;
+
+     else if (CC3=='D'||CC3=='d')
+
+         CT=CT+7;
+
+     else if (CC3=='E'||CC3=='e')
+
+         CT=CT+6;
+
+     else
+
+         CT=CT+5;
+
+/////////////////////////////////////////////////
+
+     //AQUI SE IMPRIME TU CALIFICACION SI ES MAYOR A 7 PERO MENOR A 10
+     if (CT/3>=7)
+     printf("Aprobaste con: %.2f", CT/3);
+
+     //AQUI SE I PRIME TU CALIFICACION SI ES IGUAL A 6
+     else if (CT/3==6)
+          printf("Panzaste con: %.2f", CT/3);
+
+     //AQUI SE IMPRIME SI TU CALIFICACION ES IGUAL A 5
+     else
+     printf("Reprobaste con: %.2f", CT/3);
+        printf("\n------Presione enter para regresar al menu------\n");
+
+    }
+
+        //Parte de 04.Ecuacion cuadratica
+    else if(opc==4)
+    {
+        printf("04.Ecuacion cuadratica\n");
+         //SE MUESTRA UNA LEYENDA
+   printf("Resolucion de una ecuacion de segundo grado o cuadratica\n\n");
+   printf("  2\n");
+   printf("ax + bx + c = 0\n\n");
+   //SE PIDEN LOS VALORES DE LOS COEFICIENTES EN LA ECUACION
+   printf("Introduce los valores de a, b, c y despues presiona enter: *Nota: Todos en una sola linea pero separados por una coma*");
+   scanf("%f, %f, %f", &a, &b, &c);
+
+   //AQUI SE REALIZA LA PARTE DE LAS OPERAIONES DENTRO DE LA RAIZ LLAMADA DISCRIMINANTE
+   SOLU=b*b-(4*a*c);
+
+   //SI LA DISCRIMINANTE ES IGUAL A CERO SOLO HAY UNA SOLUCION REAL Y SE PROCEDE AL CALCULO PARA LUEGO IMPRIMIR EL VALOR RESULTANTE
+   if (SOLU==0)
+    printf("La solucion es x=:   %.2f\n", -b/(2*a));
+
+   //SI LA DISCRIMINANTE ES MAYOR A CERO HAY DOS SOLUCIONES REALES Y SE PROCEDE AL CALCULO PARA LUEGO IMPRIMIR EL VALOR RESULTANTE
+   else if (SOLU>0)
+   {
+       printf("La solucion es x = :   %.2f\n", (-b+sqrt(SOLU))/(2*a));
+       printf("                1\n");
+       printf("La solucion es x = :   %.2f\n", (-b-sqrt(SOLU))/(2*a));
+       printf("                2\n");
+   }
+
+   //SI LA RESULTANTE ES MENOR A CERO HAY DOS SOLUCIONES PERO SON COMPLEJAS Y SE PROCEDE AL CALCULO PARA LUEGO IMPRIMIR EL VALOR RESULTANTE
+   else
+   {/*D<0*/
+
+       printf("La solucion es x = :   %.2f+%0.2fi\n", -b/(2*a), (sqrt(-SOLU))/(2*a));
+       printf("                1\n");
+       printf("La solucion es x = :   %.2f-%0.2fi\n", -b/(2*a), (sqrt(-SOLU))/(2*a));
+       printf("                2\n");
+
+   }
+
+        printf("\n------Presione enter para regresar al menu------\n");
+
+    }
+
+        //Parte de 05.Sucesion 1
+    else if(opc==5)
+    {
+        printf("05.Sucesion 1\n");
+         int Numero,Limite,Sucesion;
+    printf("Ingresa un numero en el rango de 0 a 5: ");
+    scanf("%d",&Numero);
+    Sucesion=Numero*Numero;
+    Limite=Sucesion-(Numero*2);
+    while (Limite <= Sucesion)
+    {
+        if (Numero <=5)
+        {
+           printf("%d ",Sucesion);
+           Sucesion=Sucesion-(2);
+        }
+        else
+        {
+            printf("Solo son numeros comprendidos del 0 hasta el 5");
+            return 0;
+        }
+    }
+        printf("\n------Presione enter para regresar al menu------\n");
+
+    }
+
+        //Parte de 06.Sucesion 2
+    else if(opc==6)
+    {
+        printf("06.Sucesion 2\n");
+         int Numero, Limite, Sucesion;
+    printf("Ingresa un numero en el rango de 0 a 5: ");
+    scanf("%d",&Numero);
+    Limite=(7*Numero)+2;
+    Sucesion=Numero*3;
+    while (Sucesion <= Limite)
+    {
+        if (Numero <=5)
+        {
+            printf("%d ",Sucesion);
+            Sucesion=Sucesion+2;
+        }
+        else
+        {
+            printf("Recuerda que es un numero del 0 al 5");
+            return 0;
+        }
+    }
+        printf("\n------Presione enter para regresar al menu------\n");
+
+    }
+
+        //Parte de salida del programa
+    else if(opc==7)
+    {
+        printf("Gracias por la visita, presione dos veces enter para salir. \nAdios.");
+
+    }
+
+        //Parte de salida por opcion invalida
+    else
+    {
+        printf("Opcion invalida, presione dos veces enter para salir.\nAdios.");
+        opc=7;
+
+    }
+    getch();
+    system("cls");
+
+}
+    return 0;
+}
