@@ -1,0 +1,179 @@
+//Elaborado por: Efrain Hernandez Gutierrez
+//Elaborado el 1 de noviembre del 2020
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int o=0;
+    int op;
+    char c;
+    while (o==0)
+    {
+    printf("----------Menu de programas----------\n");
+    printf("1.Sucesion de triangulos\n");
+    printf("2.Valor de pi\n");
+    printf("3.4 sucesiones\n");
+    printf("4.Salir\n");
+    printf("\n\nElige una opcion: ");
+    scanf("%d", &op);
+    system ("cls");
+    if (op==1)
+        {
+            printf("Aqui esta la sucesion de triangulos\n\n");
+            int na=1; //numero de asteriscos
+            int ne=0; //numero de espacios
+            int ia=1; //incremento de asteriscos
+            int ie=0; //incremento de espacios
+/////////////////////////////
+            int na1=10;//numero de asteriscos
+            int ne1=0;//numero de espacios
+            int ia1=-1;//incremento de asteriscos
+            int ie1=0;//incremento de espacios
+/////////////////////////////
+            int na2=10;//numero de asteriscos
+            int ne2=0;//numero de espacios
+            int ia2=-1;//incremento de astericos
+            int ie2=1;//incremento de espacios
+/////////////////////////////
+            int na3=1;//numero de asteriscos
+            int ne3=10;//numero de espacios
+            int ia3=1;//incremento de asteriscos
+            int ie3=-1;//incremento de espacios
+
+   for(int r=1;r<=10;r++)//For de renglones
+   {
+       for(int e=0;e<=ne;e++)//For de espacios
+       {
+           printf(" ");
+       }
+       for(int a=1;a<=na;a++)//For de asteriscos
+       {
+           printf("*");
+       }
+       printf("\n");
+
+       ne=ne+ie;
+       na=na+ia;
+   }
+/////////////////////////////////////////////////////////////
+   for(int r=1;r<=10;r++)
+   {
+       for(int e=0;e<=ne1;e++)
+       {
+           printf(" ");
+       }
+       for(int a=1;a<=na1;a++)
+       {
+           printf("*");
+       }
+       printf("\n");
+
+       ne1=ne1+ie1;
+       na1=na1+ia1;
+   }
+////////////////////////////////////////////////////
+   for(int r=1;r<=10;r++)
+   {
+       for(int e=0;e<=ne2;e++)
+       {
+           printf(" ");
+       }
+       for(int a=1;a<=na2;a++)
+       {
+           printf("*");
+       }
+       printf("\n");
+
+       ne2=ne2+ie2;
+       na2=na2+ia2;
+   }
+////////////////////////////////////////////////////////
+    for(int r=1;r<=10;r++)
+    {
+       for(int e=1;e<=ne3;e++)
+       {
+           printf(" ");
+       }
+       for(int a=1;a<=na3;a++)
+       {
+           printf("*");
+       }
+       printf("\n");
+
+       ne3=ne3+ie3;
+       na3=na3+ia3;
+   }
+    printf("\n\n----------------------------------------------------------------------------\n\n");
+        }
+    else if (op==2)
+    {
+      int z, y, x=1;
+      double Pi=0, w;
+      printf("Ingresa la cantidad de numeros:\n ");
+      scanf("%d", &y);
+
+      for (z=0;z<y;z++)
+      {
+          w=4/(double)x;
+
+               if (z%2==1)
+               {
+                    Pi-=w;
+               }
+               else
+               {
+                    Pi+=w;
+               }
+          x+=2;
+      }
+      printf("El valor de Pi es: %.16f\n", Pi);
+      printf("\n\n----------------------------------------------------------------------------\n\n");
+    }
+    else if (op==3)
+    {
+    	{
+        int x=0;
+        int a=1;
+        int b=2;
+        int c=30;
+        int d=15;
+		printf("Ingrese las cifras que quiere ver: \n");
+        scanf("%i", &x);
+		printf("\t\tNumero:  A)                    B)                    C)                    D)\n");
+		for(int y=1;y<=x;y++)
+		{
+			printf("\t\t   %d:    %d                     %d                     %d                    %d\n", y, a, b, c, d);
+			a=a+2;
+			b=b+3;
+			c=c-10;
+			d=d+8;
+		}
+        printf("\n\n----------------------------------------------------------------------------\n\n");
+	}
+    }
+    else if (op==4)
+    {
+        exit(-1);
+    }
+    else
+    {
+        printf("Esta no es una opcion valida\n");
+    }
+    printf("Te gustaria regresar al menu\n[S/N]:\n");
+        scanf("%s", &c);
+        if(c=='s'||c=='S')
+        {
+            c=0;
+        }
+        else if(c=='n'||c=='N')
+        {
+            system("cls");
+            printf("Gracias por la visita, adios!!");
+            exit(-1);
+        }
+        system("cls");
+    }
+    return 0;
+}
+
