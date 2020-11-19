@@ -1,0 +1,38 @@
+//Hecho por Efrain Hernandez Gutierrez
+//18 de nov del 2020
+#include <stdio.h>
+
+
+int vectornuevo(int A, int A1, int B, int B1);
+
+
+int main(void)
+{
+    int A, A1, B, B1, suma1;
+    printf("Hecho por Efrain Hernandez Gutierrez\n");
+    printf("18 de noviembre del 2020\n\n\n");
+    system("pause");
+    system("cls");
+    printf("******************Suma de 2 Vectores por sus componentes******************\n\n\n");
+
+    printf("Escribe los componentes de el primer Vector: \n\t");
+    scanf("%d, %d", &A, &B);
+
+    printf("Escribe los componentes de el segundo Vector: \n\t");
+    scanf("%d, %d", &A1, &B1);
+
+    printf("El nuevo vector es: \n\t%d,%d", vectornuevo(A, A1, B, B1), suma1=B+B1);
+
+
+    return suma1;
+}
+
+int vectornuevo(int A, int A1, int B, int B1)
+{
+    int suma;
+
+
+    suma=A+A1;
+
+    return suma;
+}
